@@ -1,0 +1,42 @@
+﻿<Window x:Class="Parcial_Agenda.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Parcial_Agenda"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+      
+        <TextBlock Text="Agenda" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,10"/>
+
+  
+        <StackPanel Grid.Row="1" Margin="10">
+         
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <Label Content="Nombre:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBox x:Name="txtNombreTarea" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <Label Content="Descripción:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <TextBox x:Name="txtDescripcionTarea" Width="200" VerticalAlignment="Center"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <Label Content="Fecha:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                <DatePicker x:Name="dpFechaTarea" VerticalAlignment="Center"/>
+            </StackPanel>
+         
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Agregar Tarea" Width="100" Margin="0,0,10,0" Click="AgregarTarea_Click"/>
+                <Button Content="Eliminar Tarea" Width="100" Click="EliminarTarea_Click"/>
+            </StackPanel>
+        
+            <ListBox x:Name="lstTareas" Margin="0,10,0,0"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
